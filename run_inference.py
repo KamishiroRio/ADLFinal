@@ -8,7 +8,7 @@ import sys
 
 # --- Configuration ---
 DEFAULT_ALGORITHM_NAME = PromptSafetyAgent.MANDATORY_ENTRY_POINT
-DEFAULT_DATASET_PATH = "data/public" # or data/private or toy_data.jsonl
+DEFAULT_DATASET_PATH = "theblackcat102/ADL_Final_25W_part1"
 
 def _get_common_args():
     """Parses command-line arguments, same as eval script."""
