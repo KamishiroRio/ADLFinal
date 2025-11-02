@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 #### Data
 The datasets will be loaded from huggingface by default. You can move them into `data/` and specify the path to directories if you like.
-* The public dataset is [theblackcat102/ADL_Final_25W_part1](https://huggingface.co/datasets/theblackcat102/ADL_Final_25W_part1).
+* The public dataset is [theblackcat102/ADL_Final_25W_part1_with_cost](https://huggingface.co/datasets/theblackcat102/ADL_Final_25W_part1_with_cost).
 * The private dataset will be released on 12/8.
 * `data/toy_data.jsonl` is provided for debugging and testing purposes only and is not involved in the final submission.
 
@@ -112,7 +112,7 @@ This script loads a dataset, runs your selected algorithm, and saves a JSONL fil
 ### Basic Command
 
 ```bash
-python run_inference.py --dataset theblackcat102/ADL_Final_25W_part1 --algorithm evaluate_rewrite
+python run_inference.py --dataset theblackcat102/ADL_Final_25W_part1_with_cost --algorithm evaluate_rewrite
 ```
 
 **Arguments:**
