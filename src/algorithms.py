@@ -68,14 +68,14 @@ class RewriteAgent:
         raw = self.tokenizer.decode(output[0], skip_special_tokens=True)
         return self.extract_clean_answer(raw)
 
-    def iterative_rewrite(self, text, style="more formal", rounds=3):
+    def iterative_rewrite(self, text, rounds=3):
         """
         AutoDAN-like self refinement, but WITHOUT giving model any dialog history.
         """
         current = text
 
         for _ in range(rounds):
-            current = self.rewrite_once(current, style)
+            current = self.rewrite_once(current)
 
         return current
 
@@ -113,7 +113,6 @@ def algorithm_1(prompt: str) -> str:
     """
     return rewrite_agent.iterative_rewrite(
         prompt,
-        style="more formal and academic",
         rounds=3
     )
 
